@@ -5,11 +5,11 @@ def findZigZagSequence(a, n):
 
     st = mid + 1
     ed = n - 1
-    while(st <= ed):
+    while st <= ed:
         a[st], a[ed] = a[ed], a[st]
         st = st + 1
         if st + 2 >= ed:
-           ed = ed - 1
+            ed = ed - 1
 
     for i in range (n):
         if i == n-1:
@@ -23,4 +23,3 @@ for cs in range (test_cases):
     n = int(input())
     a = list(map(int, input().split()))
     findZigZagSequence(a, n)
-
